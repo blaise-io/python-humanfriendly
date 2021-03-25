@@ -250,6 +250,11 @@ def setup(app):
     enable_pypi_role(app)
     enable_special_methods(app)
     enable_usage_formatting(app)
+    
+    return {
+        "parallel_read_safe": True,
+        "parallel_write_safe": True,
+    }
 
 
 def special_methods_callback(app, what, name, obj, skip, options):
